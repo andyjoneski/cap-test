@@ -8,6 +8,7 @@
 # server "db.example.com", user: "deploy", roles: %w{db}
 server "192.168.1.3",  user: "attainserver", roles: %w{app web}
 set :user, "attainserver"
+set :branch, ENV.fetch("branch", "master")
 
 
 # role-based syntax

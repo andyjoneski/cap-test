@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock "3.8.0"
 
-set :application, "capistrano-test"
+set :application, "cap-test"
 set :repo_url, "git@github.com:andyjoneski/cap-test.git"
 
 # Default branch is :master
@@ -9,7 +9,7 @@ set :repo_url, "git@github.com:andyjoneski/cap-test.git"
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
-set :deploy_to, "/var/www/cap-test/httpdocs"
+set :deploy_to, "/var/www/cap-test"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
