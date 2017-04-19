@@ -7,11 +7,10 @@ set :repo_url, "git@github.com:andyjoneski/cap-test.git"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 namespace :deploy do
-    desc 'Move files'
-    task :move_files do
+    desc 'Run gulp to compile the static site'
+    task :gulp_build do
         run_locally do
-            execute "mkdir ./pages"
-            execute "mv pages.html ./pages/pages.html"
+            execute "gulp"
         end
     end
 end
