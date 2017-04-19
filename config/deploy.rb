@@ -7,6 +7,24 @@ set :repo_url, "git@github.com:andyjoneski/cap-test.git"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
+namespace :deploy do
+    desc 'Run gulp to compile the static site'
+    task :gulp_build do
+        run_locally do
+            execute "gulp prod"
+        end
+    end
+end
+namespace :deploy do
+    desc 'Print info'
+    task :gulp_build do
+        run_locally do
+            execute "echo hello world"
+        end
+    end
+end
+
+
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, "/var/www/my_app_name"
 set :deploy_to, "/var/www/cap-test"
